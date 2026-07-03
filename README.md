@@ -25,7 +25,7 @@ The value isn't the code the AI writes. It's that a **single person can hold the
 | `standards/approval-levels.md` | The approval boundary. **reversibility × exposure × money/legal** — decides what the AI does alone vs. what needs you. The most important file. |
 | `.claude/rules/` | How the AI works: how it reports (PREP), how it manages files, the mistakes it must not repeat. |
 | `.claude/skills/standup/` | Weekly standup skill — the AI reports progress + **surfaces everything waiting on your approval** so nothing stalls silently. |
-| `.claude/hooks/` | Example guardrails (safety checks that run automatically, not left to the agent's goodwill). |
+| `.claude/hooks/` | Example guardrail (`pre-bash-guard.sh`, fail-closed) + how to write your own. The full library lives in [willink-claude-kit](https://github.com/willink-oss/willink-claude-kit). |
 | `departments/` | The org as folders. Each "department" is a directory with a `DEPARTMENT.md` charter. The secretary department holds your action list + routine governance. |
 | `docs/getting-started.md` | Zero-to-running: from empty repo to your first AI-COO standup. |
 | `docs/adr/` | Architecture Decision Records — how the company records irreversible-ish decisions. |
@@ -60,7 +60,7 @@ Full walkthrough: [`docs/getting-started.md`](docs/getting-started.md).
 
 ## Status
 
-`v0.1.0` — foundational structure (operating manual, approval levels, rules, standup, department templates). More modules (routine automation patterns, additional skills, hook library) ship incrementally.
+`v0.2.0` — foundational structure (operating manual, approval levels, rules, standup, department templates) plus a completeness pass: a filled-in secretary charter, a sample standup output, and an example guardrail hook. See [CHANGELOG.md](CHANGELOG.md). More modules (routine automation patterns, additional skills, a fuller hook library) ship incrementally — see [willink-claude-kit](https://github.com/willink-oss/willink-claude-kit) for the enforcement layer.
 
 ## License
 
