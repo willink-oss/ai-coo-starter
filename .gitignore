@@ -1,0 +1,16 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+
+# Local / editor
+.DS_Store
+node_modules/
+.venv/
+*.log
+
+# Private company data (if you keep it in this repo, gitignore it)
+# departments/**/private/
